@@ -7,6 +7,7 @@ import { FormSwitcherComponent } from './form-switcher/form-switcher.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 const components = [LoginComponent, FormSwitcherComponent, RegisterComponent];
 
@@ -18,6 +19,7 @@ const components = [LoginComponent, FormSwitcherComponent, RegisterComponent];
     MatInputModule,
     MatTabsModule,
     RouterModule,
+    MatButtonModule,
   ],
   exports: [...components],
 })
