@@ -6,12 +6,19 @@ import { LoginComponent } from './login/login.component';
 import { FormSwitcherComponent } from './form-switcher/form-switcher.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
 
 const components = [LoginComponent, FormSwitcherComponent, RegisterComponent];
 
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, MatFormFieldModule, MatInputModule, MatTabsModule],
+  imports: [
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTabsModule,
+    RouterModule,
+  ],
   exports: [...components],
 })
 export class AuthenticationModule {}
