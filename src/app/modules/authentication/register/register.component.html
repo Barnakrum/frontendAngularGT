@@ -1,1 +1,25 @@
-<gt-form-switcher></gt-form-switcher>
+<div class="container">
+  <div class="formWithNav">
+    <gt-form-switcher></gt-form-switcher>
+    <form>
+      <mat-form-field id="loginField">
+        <mat-label>Login/E-mail</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Hasło</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Powtórz hasło</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <div class="buttonAndError">
+        <p>{{ errorMessage }}</p>
+        <button mat-raised-button color="primary">Zarejestruj</button>
+      </div>
+    </form>
+  </div>
+</div>
+<img id="background" src="../../../../assets/AdobeStock_265997832.jpeg" />
