@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'gt-reset-password',
@@ -6,7 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reset-password.component.scss'],
 })
 export class ResetPasswordComponent implements OnInit {
-  errorMessage: string | undefined;
+  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {}
+  formGroup: FormGroup | undefined;
+
+  errorMessage: string | undefined;
+  ngOnInit(): void {
+    this.formGroup = this.formBuilder.group({
+      email: [undefined, [Validators.required, Validators.email]],
+    });
+  }
+
+  onFormSubmit(): void {
+    if (this.formGroup?.valid) {
+      console.log(this.formGroup?.value);
+    }
+  }
 }
