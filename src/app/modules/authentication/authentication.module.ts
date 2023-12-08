@@ -8,8 +8,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
-const components = [LoginComponent, FormSwitcherComponent, RegisterComponent];
+const components = [
+  LoginComponent,
+  FormSwitcherComponent,
+  RegisterComponent,
+  ResetPasswordComponent,
+];
 
 @NgModule({
   declarations: [...components],
