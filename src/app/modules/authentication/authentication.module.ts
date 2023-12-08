@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const components = [
   LoginComponent,
@@ -26,6 +27,7 @@ const components = [
     MatTabsModule,
     RouterModule,
     MatButtonModule,
+    ReactiveFormsModule,
   ],
   exports: [...components],
 })
