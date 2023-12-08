@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'gt-form-switcher',
   templateUrl: './form-switcher.component.html',
-  styleUrls: ['./form-switcher.component.css'],
+  styleUrls: ['./form-switcher.component.scss'],
 })
 export class FormSwitcherComponent implements OnInit {
   links: string[] = ['login', 'register'];
