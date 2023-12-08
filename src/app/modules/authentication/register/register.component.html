@@ -1,23 +1,25 @@
 <div class="container">
   <div class="formWithNav">
     <gt-form-switcher></gt-form-switcher>
-    <form>
+    <form *ngIf="formGroup" [formGroup]="formGroup">
       <mat-form-field id="loginField">
         <mat-label>Login/E-mail</mat-label>
-        <input matInput />
+        <input formControlName="email" matInput />
       </mat-form-field>
       <mat-form-field>
         <mat-label>Hasło</mat-label>
-        <input matInput />
+        <input formControlName="password" matInput />
       </mat-form-field>
       <mat-form-field>
         <mat-label>Powtórz hasło</mat-label>
-        <input matInput />
+        <input formControlName="resetPassword" matInput />
       </mat-form-field>
 
       <div class="buttonAndError">
         <p>{{ errorMessage }}</p>
-        <button mat-raised-button color="primary">Zarejestruj</button>
+        <button (click)="onFormSubmit()" mat-raised-button color="primary">
+          Zarejestruj
+        </button>
       </div>
     </form>
   </div>
